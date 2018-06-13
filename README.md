@@ -24,3 +24,21 @@ $ docker image rm 45
 $ docker image rm $(docker image ls -q redis)
 或者删除所有在  mongo:3.2  之前的镜像：
 $ docker image rm $(docker image ls -q -f before=mongo:3.2)
+
+<h3>快速部署rabbitmq</h3>
+
+docker pull rabbitmq:management
+创建并运行容器：
+
+复制代码
+docker run -d --hostname my-rabbit --name rabbit -p 8080:15672 rabbitmq:management
+--hostname：指定容器主机名称
+--name:指定容器名称
+-p:将mq端口号映射到本地
+
+或在运行时设置用户和密码
+docker run -d --hostname my-rabbit --name rabbit -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -p 15672:15672 -p 5672:5672 -p 25672:25672 -p 61613:61613 -p 1883:1883 rabbitmq:management
+
+ 15672：控制台端口号
+
+ 5672：应用访问端口号

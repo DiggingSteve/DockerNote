@@ -42,3 +42,5 @@ docker run -d --hostname my-rabbit --name rabbit -e RABBITMQ_DEFAULT_USER=admin 
  15672：控制台端口号
 
  5672：应用访问端口号
+ 
+ 管理工具 https://dashboard.daocloud.io

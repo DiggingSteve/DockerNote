@@ -1,6 +1,7 @@
 nginx -s reload 
 
 子配置 conf.d
+
 server {
     listen  80;
     server_name  www.cndota.top;

@@ -1,4 +1,9 @@
+
+ 容器内部安装vim：apt-get update，这个命令的作用是：同步 /etc/apt/sources.list 和 /etc/apt/sources.list.d 中列出的源的索引，这样才能获取到最新的软件包。
+
+        等更新完毕以后再敲命令：apt-get install vim命令即可。
 nginx -s reload 
+
 
 子配置 conf.d
 
